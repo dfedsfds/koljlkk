@@ -3185,24 +3185,7 @@ let roles = guild.members.get(banner).roles.array();
 guild.members.get(banner).removeRoles(roles);
   guild.guild.member(banner).kick();
 
-} catch (error) {
-console.log(error)
-try {
-guild.members.get(banner).ban();
-  rebellog.send(`<@!${banner.id}>
-حآول العبث بالسيرفر @everyone`);
-guild.owner.send(`<@!${banner.id}>
-حآول العبث بالسيرفر ${guild.name}`)
-    setTimeout(() => {
- guilds[guild.id].bans = 0;
-  },Otime)
-} catch (error) {
-console.log(error)
-}
-}
-}
-})
-});
+
  let channelc = {};
   client.on('channelCreate', async (channel) => {
   const rebellog = client.channels.find("name", "log"),
