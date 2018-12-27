@@ -3154,36 +3154,7 @@ var prefix = "-";
     }
 });
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-/*جميع الحقوق محفوظهه لريبل ولسيرفر كودز
-رآح يرسل للأونر تحذير + م يتطلب ملفات سويته لكم داتا مؤقت
-سو روم بأسم log 
-أو غيره من الكود عشان يرسل هنا التحذير
-nvm i 10 
-nvm use 10
-npm i discord.js
-*/
-var guilds = {};
-client.on('guildBanAdd', function(guild) {
-            const rebellog = client.channels.find("name", "log"),
-            Onumber = 3,
-  Otime = 10000
-guild.fetchAuditLogs({
-    type: 22
-}).then(audit => {
-    let banner = audit.entries.map(banner => banner.executor.id)
-    let bans = guilds[guild.id + banner].bans || 0 
-    guilds[guild.id + banner] = {
-        bans: 0
-    }
-      bans[guilds.id].bans += 1; 
-if(guilds[guild.id + banner].bans >= Onumber) {
-try {
-let roles = guild.members.get(banner).roles.array();
-guild.members.get(banner).removeRoles(roles);
-  guild.guild.member(banner).kick();
+
 
 
   client.on('message', message => { 
