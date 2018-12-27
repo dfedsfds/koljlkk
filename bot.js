@@ -31,8 +31,8 @@ const sql = require("sqlite");
 
 
 client.on('message', msg => {
-    if (msg.content === '.') {
-      msg('# Wellllcome To Strive Server :rose:');
+    if (msg.content === 'لينا') {
+      msg.reply('وش بدك منها -_-');
     }
   });
 
