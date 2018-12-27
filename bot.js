@@ -30,11 +30,7 @@ const sql = require("sqlite");
 
 
 
-client.on('message', msg => {
-    if (msg.content === 'لينا') {
-      msg.reply('وش بدك منها -_-');
-    }
-  });
+
 
 
 
