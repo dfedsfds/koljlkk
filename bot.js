@@ -42,7 +42,7 @@ if(message.content.startsWith('-bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let copy = "RoadBot.";
+let copy = "bot by: Lina.";
 let request = `Requested By ${message.author.username}`;
 if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 msg.react('✅')
@@ -60,9 +60,9 @@ var bc = new
 Discord.RichEmbed()
 .setColor('RANDOM')
 .setTitle('Brodcast')
-.addField('**The Server**', message.guild.name)
-.addField('**The Sender**', message.author.username)
-.addField('**The Message**', args)
+.addField('**السيرفر**', message.guild.name)
+.addField('**المرسل**', message.author.username)
+.addField('**الرسالة**', args)
 .setThumbnail(message.author.avatarURL)
 .setFooter(copy, client.user.avatarURL);
 m.send({ embed: bc })
@@ -559,6 +559,7 @@ client.on("message", (message) => {
 -role humans <rank> / لأعطاء رتبة للاشخاص فقط』
 -role bots <rank> / لأعطاء رتبة لجميع البوتات』
 -hchannel / اخفاء الشات』
+-bc / برودكسات ب امبيد 』
 -schannel / اضهار الشات المخفية』
 -clr <numbr> / مسح الشات بعدد』
 -clear / مسح الشات』
