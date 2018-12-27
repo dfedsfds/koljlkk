@@ -38,6 +38,8 @@ const sql = require("sqlite");
 
 
 
+lient.on('message', message => { // Leaked by [ @Out Our server ]
+   if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return
@@ -78,9 +80,11 @@ message.guild.members.forEach(m => {
 var NormalRep = args.replace('<server>' ,message.guild.name).replace('<user>', m).replace('<by>', `${message.author.username}#${message.author.discriminator}`)
 m.send(NormalRep);
 msg.delete();
-     
-  });
-
+})
+})
+})
+}
+});
 
 
 
