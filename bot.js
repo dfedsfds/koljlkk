@@ -32,7 +32,7 @@ const sql = require("sqlite");
 
 client.on('message', msg => {
     if (msg.content === '.') {
-      msg.reply('# Wellllcome To Strive Server :rose:');
+      msg('# Wellllcome To Strive Server :rose:');
     }
   });
 
