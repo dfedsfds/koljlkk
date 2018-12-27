@@ -39,6 +39,39 @@ client.on('message', msg => {
 
 
 
+client.on('message', msg => {
+    if (msg.content === '.') {
+      msg.reply('اتحداك تكتب ..');
+    }
+  });
+
+
+
+
+
+
+client.on('message', msg => {
+    if (msg.content === '..') {
+      msg.reply(' سويها وراح تشوف شو يصير...');
+    }
+  });
+
+client.on('message', msg => {
+    if (msg.content === '...') {
+      msg.reply(' سويها وراح تحصل اعلى رتبه بالسيرفر....');
+    }
+  });
+
+
+
+client.on('message', msg => {
+    if (msg.content === '....') {
+      msg.reply(':joy: :joy:  تم النصب عليك مبروك :joy: :joy:   ');
+    }
+  });
+
+
+
 
 
 
