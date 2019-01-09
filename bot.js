@@ -34,6 +34,17 @@ const sql = require("sqlite");
 
 
 
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","DJ DaM"));
+    });
+
+
+
+
+
+
+
+
 client.on('message', function(message) {
     if (message.channel.type === "dm") {
         if (message.author.id === client.user.id) return;
