@@ -31,6 +31,82 @@ const sql = require("sqlite");
 
 
 
+const invites = {};
+
+const wait = require('util').promisify(setTimeout);
+
+client.on('ready', () => {
+  wait(1000);
+
+  client.guilds.forEach(g => {
+    g.fetchInvites().then(guildInvites => {
+      invites[g.id] = guildInvites;
+    });
+  });
+});
+
+client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const ei = invites[member.guild.id];
+    invites[member.guild.id] = guildInvites;
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+    const logChannel = member.guild.channels.find(channel => channel.name === "★゜・chat");
+    logChannel.send(`${member} Invited by: <@${inviter.id}>`);
+  });
+});
+
+
+
+
+
+
+
+
+const developers = ["472472793536266250"]//Toxic Codes
+client.on('message', message => {//Toxic Codes
+    var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
+      if (!developers.includes(message.author.id)) return;
+     
+  if (message.content.startsWith(adminprefix + 'setg')) {
+    client.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else
+     if (message.content === (adminprefix + "leave")) {//Toxic Codes
+    message.guild.leave();   //Toxic Codes
+  } else  
+  if (message.content.startsWith(adminprefix + 'setw')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else
+  if (message.content.startsWith(adminprefix + 'setl')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
+  } else
+  if (message.content.startsWith(adminprefix + 'sets')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/zero");
+      message.channel.send(`**✅**`)//Toxic Codes
+  }
+  if (message.content.startsWith(adminprefix + 'setname')) {
+  client.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+  if (message.content.startsWith(adminprefix + 'setprefix')) {//Toxic Codes
+  client.user.setPrefix(argresult).then
+      message.channel.send(`Changing Prefix ..**${argresult}** `)//Toxic Codes
+} else
+if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
+  client.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);//Toxic Codes
+}
+});//Toxic Codes
+
+
+
+
+
+
+
 
 
 
