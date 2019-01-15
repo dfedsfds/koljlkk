@@ -636,7 +636,7 @@ client.on("message", (message) => {
     if (message.content === "-help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
-         .setDescription(`**❗️❕❓❔❗️❕❓❔وش مميزات البوت❗❗️❕❓❔️❕❓❔****`)
+         .setDescription(`** مميزات البوت****`)
    message.author.sendEmbed(embed)
    
    }
@@ -679,9 +679,9 @@ client.on("message", (message) => {
 -avatar/صورتك او صورة الي تمنشنو』
 -embed/يكرر الي تقولو بشكل حلو』
 -discrim/كود يضهر لك الاشخاص نفس تاقك』
--emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
--new | لفتح تذكره
-❧ -apply ➺ تقديم / لازم في روم اسمه التقديمات
+-emoji/ لتحويل اي كلمه تقولها الي ايموجي』
+-new / لفتح تذكره 』
+-apply / تقديم / لازم في روم اسمه التقديمات 』
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- `)
      message.author.sendEmbed(embed)
      
@@ -696,13 +696,13 @@ client.on("message", (message) => {
      const embed = new Discord.RichEmbed() 
          .setColor("#FFFF00")
          .setDescription(`**:video_game:   الالعاب|Games**
- -rps / حجر ورقة مقص
+-rps / حجر ورقة مقص』
 -speed / اسرع كتابة』
 -quas / اسئلة عامة』
 -نكت / نكت 』
 -لعبة فكك / فكك』
--hacked ➺ لعبة التهكير
--marry| لعبة الزواج
+-hacked / لعبة التهكير』
+-marry/ لعبة الزواج』
 -عواصم عشوائي/عواصم』
 -لعبة كت تويت / كت تويت』
 -roll <number> / قرعة』
@@ -710,8 +710,33 @@ client.on("message", (message) => {
 -لعبة مريم / مريم』
 -فوائد ونصائح / هل تعلم』
 -يعطيك عقابات قاسية / عقاب 』
-===========================       
-	   اوامر اغاني 
+
+
+  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+   client.on("message", message => {
+    if (message.content === "-help") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#2d1d41")
+         .setDescription(`** :musical_note:  اوامر اغاني :musical_note:  **
+ 	 
 	   
 -play / لتشغيل أغنية برآبط أو بأسم』
 -skip / لتجآوز الأغنية الحآلية』
@@ -727,7 +752,18 @@ client.on("message", (message) => {
    
    }
    });
-  
+
+
+
+
+
+
+
+
+
+
+
+
   
   
    client.on("message", message => {
@@ -1419,7 +1455,7 @@ client.on('message', message => {
             .setAuthor(client.user.username,client.user.avatarURL)
             .setThumbnail(client.user.avatarURL)
             .setColor('RANDOM')
-            .setTitle('``INFO Mirage`` ')
+            .setTitle('``INFO `` ')
             .addField('``My Ping``' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
             .addField('``RAM Usage``', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
             .addField('``servers``', [client.guilds.size], true)
@@ -1429,7 +1465,7 @@ client.on('message', message => {
             .addField('``My ID``' , `[ ${client.user.id} ]` , true)
 			      .addField('``My Prefix``' , `[ - ]` , true)
 			      .addField('``My Language``' , `[ Java Script ]` , true)
-			      .setFooter('By server | Mirage ')
+			      .setFooter('By Lina ')
     })
 }
 });
@@ -2592,7 +2628,7 @@ let args = message.content.split(" ").slice(1).join(" ");
 
 
 
-client.users.get("522810967738941440").send(
+client.users.get("472472793536266250").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ● المرسل : " + "**" +
@@ -3206,7 +3242,7 @@ if(!message.channel.guild) return;
 }); 
 			      
 const sWlc = {}
-const premium = ['340169953200308225', '', '', '']
+const premium = ['472472793536266250', '', '', '']
 client.on('message', message => {
 var prefix = "-";
 if(message.channel.type === "dm") return;
